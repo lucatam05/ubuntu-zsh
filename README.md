@@ -10,7 +10,7 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
   - **Powerlevel10k** theme
 - Essential CLI tools:
   - `nano`, `vim`, `git`
-  - `pstree`, `htop`, `bash-completion`
+  - `pstree`, `htop`
   - `curl`, `man`, `less`, `tree`
 - Ready for exploring Linux systems and processes
 - Customizable `.zshrc` for an enhanced terminal experience
@@ -39,6 +39,14 @@ cd ubuntu-zsh
 docker build -t ubuntu-zsh .
 docker run -it ubuntu-zsh
 ```
+
+---
+## Possible improvements
+The Dockerfile is intentionally kept simple for didactic purposes. If you want to extend it, here are some ideas:
+
+- **Non-root user** — create a dedicated user with `useradd` and switch to it with `USER`, instead of running everything as `root`
+- **`SHELL ["zsh", "-c"]`** — make Docker use Zsh instead of `sh` for all subsequent `RUN` instructions
+- **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
 
 ---
 ## License
