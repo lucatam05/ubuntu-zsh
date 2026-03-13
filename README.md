@@ -68,12 +68,6 @@ The Dockerfile is intentionally kept simple for didactic purposes. If you want t
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-- **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
-
----
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-- **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
 
 ---
 ## License
