@@ -18,6 +18,7 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
 ---
 ## Requirements
 - [Docker](https://docs.docker.com/get-docker/) installed and running
+- A [Nerd Font](https://www.nerdfonts.com/) installed and set in your terminal emulator (recommended: MesloLGS NF) — required for Powerlevel10k icons to display correctly
 
 ---
 ## Usage
@@ -34,7 +35,7 @@ bash run.sh
 ```bash
 git clone https://github.com/lucatam05/ubuntu-zsh.git
 cd ubuntu-zsh
-docker compose up
+docker compose run --rm dev
 ```
 
 ### Option 3 — Pull and run directly
@@ -52,7 +53,7 @@ docker run -it ghcr.io/lucatam05/ubuntu-zsh:latest
 git clone https://github.com/lucatam05/ubuntu-zsh.git
 cd ubuntu-zsh
 docker build -t ubuntu-zsh .
-docker compose up
+docker compose run --rm dev
 ```
 
 ---
@@ -61,6 +62,17 @@ The Dockerfile is intentionally kept simple for didactic purposes. If you want t
 
 - **Non-root user** — create a dedicated user with `useradd` and switch to it with `USER`, instead of running everything as `root`
 - **`SHELL ["zsh", "-c"]`** — make Docker use Zsh instead of `sh` for all subsequent `RUN` instructions
+- **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
+
+---
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
+
+---
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 - **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
 
 ---
