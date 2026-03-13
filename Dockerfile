@@ -33,10 +33,15 @@ RUN git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions \
 RUN sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' /root/.zshrc \
     && sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' /root/.zshrc
 
-# persist powerlevel10k config in volume
-RUN mkdir -p /root/.config/zsh \
-    && echo 'export POWERLEVEL9K_CONFIG_FILE=/root/.config/zsh/.p10k.zsh' >> /root/.zshrc
+# backup default config for entrypoint
+RUN cp -r /root /root-default
+
+# entrypoint
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 RUN mkdir /workspace
 WORKDIR /workspace
+
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["zsh"]
