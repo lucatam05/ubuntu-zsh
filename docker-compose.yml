@@ -1,0 +1,11 @@
+services:
+  dev:
+    build: .
+    image: ubuntu-zsh
+    stdin_open: true
+    tty: true
+    volumes:
+      - workspace:/workspace
+
+volumes:
+  workspace:
