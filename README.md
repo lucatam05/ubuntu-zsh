@@ -27,9 +27,11 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
 ### Pull the image
 
 ```bash
-docker pull ghcr.io/lucatam05/ubuntu-zsh:latest
+docker pull ghcr.io/lucatam05/ubuntu-zsh:latest```
+
+---
 
 ### Run the container
 
 ```bash
-docker run -it ghcr.io/lucatam05/ubuntu-zsh:latest
+docker run -it ghcr.io/lucatam05/ubuntu-zsh:latest```
