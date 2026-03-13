@@ -21,23 +21,38 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
 
 ---
 ## Usage
-### Pull the image
+
+### Option 1 — run.sh (recommended)
+Clone the repo and use the provided script:
 ```bash
-docker pull ghcr.io/lucatam05/ubuntu-zsh:latest
-```
----
-### Run the container
-```bash
-docker run -it ghcr.io/lucatam05/ubuntu-zsh:latest
+git clone https://github.com/lucatam05/ubuntu-zsh.git
+cd ubuntu-zsh
+bash run.sh
 ```
 
+### Option 2 — Docker Compose
+```bash
+git clone https://github.com/lucatam05/ubuntu-zsh.git
+cd ubuntu-zsh
+docker compose up
+```
+
+### Option 3 — Pull and run directly
+If you just want to try the container without cloning the repo:
+```bash
+docker pull ghcr.io/lucatam05/ubuntu-zsh:latest
+docker run -it ghcr.io/lucatam05/ubuntu-zsh:latest
+```
+> ⚠️ This option does not mount a volume — any files created inside the container will be lost when it stops.
+
 ---
+
 ## Build from source
 ```bash
 git clone https://github.com/lucatam05/ubuntu-zsh.git
 cd ubuntu-zsh
 docker build -t ubuntu-zsh .
-docker run -it ubuntu-zsh
+docker compose up
 ```
 
 ---
