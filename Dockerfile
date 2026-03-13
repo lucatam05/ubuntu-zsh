@@ -29,9 +29,6 @@ RUN git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions \
     && git clone --depth=1 https://github.com/romkatv/powerlevel10k \
       /root/.oh-my-zsh/custom/themes/powerlevel10k
 
-# enable plugins
-RUN sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' /root/.zshrc
-
 # enable plugins and theme
 RUN sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' /root/.zshrc \
     && sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' /root/.zshrc
