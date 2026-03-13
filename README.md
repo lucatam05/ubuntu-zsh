@@ -18,7 +18,7 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
 ---
 ## Requirements
 - [Docker](https://docs.docker.com/get-docker/) installed and running
-- A [Nerd Font](https://www.nerdfonts.com/) installed and set in your terminal emulator (recommended: MesloLGS NF) — required for Powerlevel10k icons to display correctly
+- A [Nerd Font](https://www.nerdfonts.com/) installed and set in your terminal emulator (recommended: MesloLGS NF) — required for Powerlevel10k icons to display correctly (also optional tbh)
 
 ---
 ## Usage
