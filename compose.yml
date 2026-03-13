@@ -6,7 +6,7 @@ services:
     tty: true
     volumes:
       - workspace:/workspace
-      - zsh-config:/root/.config/zsh
+      - zsh-config:/root
 
 volumes:
   workspace:
