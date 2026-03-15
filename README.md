@@ -12,6 +12,7 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
   - `nano`, `vim`, `git`
   - `pstree`, `htop`
   - `curl`, `man`, `less`, `tree`
+  - `gcc`, `g++`, `make` (via `build-essential`)
 - Ready for exploring Linux systems and processes
 - Customizable `.zshrc` for an enhanced terminal experience
 - Works on both **arm64** (M1/M2/M3 Macs) and **amd64** (Intel/Windows/Linux)
@@ -63,6 +64,9 @@ The Dockerfile is intentionally kept simple for didactic purposes. If you want t
 - **Non-root user** — create a dedicated user with `useradd` and switch to it with `USER`, instead of running everything as `root`
 - **`SHELL ["zsh", "-c"]`** — make Docker use Zsh instead of `sh` for all subsequent `RUN` instructions
 - **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
+- **`python3`** — useful for scripting and running Python programs
+- **`wget`** — alternative to `curl` for downloading files
+- **`net-tools` and `iputils-ping`** — useful for exploring networking (`ifconfig`, `netstat`, `ping`)
 
 ---
 
