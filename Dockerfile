@@ -15,6 +15,7 @@ RUN apt update && apt install -y \
     less \
     tree \
     ca-certificates \
+    build-essential \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
