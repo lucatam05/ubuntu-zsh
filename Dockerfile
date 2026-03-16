@@ -16,6 +16,7 @@ RUN apt update && apt install -y \
     tree \
     ca-certificates \
     build-essential \
+    python3 \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
