@@ -13,7 +13,7 @@ A ready-to-use Ubuntu Docker container preconfigured with **Zsh**, **Oh My Zsh**
   - `pstree`, `htop`
   - `curl`, `man`, `less`, `tree`
   - `gcc`, `g++`, `make` (via `build-essential`)
-  - 'python3'
+  - `python3`
 - Ready for exploring Linux systems and processes
 - Customizable `.zshrc` for an enhanced terminal experience
 - Works on both **arm64** (M1/M2/M3 Macs) and **amd64** (Intel/Windows/Linux)
