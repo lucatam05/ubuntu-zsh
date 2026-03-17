@@ -67,11 +67,6 @@ The Dockerfile is intentionally kept simple for didactic purposes. If you want t
 - **Oh My Zsh without `curl | sh`** — replace the install script with a direct `git clone` of the Oh My Zsh repository for better reproducibility and security
 - **`wget`** — alternative to `curl` for downloading files
 - **`net-tools` and `iputils-ping`** — useful for exploring networking (`ifconfig`, `netstat`, `ping`)
-- **Shared folder with host** — add a bind mount in `compose.yml` to share a folder between your machine and the container (use an absolute path, not `~`):
-  ```yml
-  volumes:
-    - /absolute/path/on/your/machine:/shared/host
-  ```
   
 ---
 
