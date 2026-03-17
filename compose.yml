@@ -7,6 +7,7 @@ services:
     volumes:
       - workspace:/workspace
       - zsh-config:/root
+      - ./host:/shared/host
 
 volumes:
   workspace:
